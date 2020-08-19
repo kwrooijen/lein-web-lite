@@ -29,8 +29,13 @@
 
 (defonce server (atom nil))
 
+(def port
+  (-> (System/getenv "PORT")
+      (or "3000")
+      (Integer/parseInt)))
+
 (defn start-server []
-  (reset! server (http/start-server #'app {:port 3000})))
+  (reset! server (http/start-server #'app {:port port})))
 
 (defn stop-server []
   (when @server
@@ -43,5 +48,5 @@
 ;; Application entrypoint
 
 (defn -main [& args]
-  (println "Starting webserver.")
+  (println (format "Starting webserver on port: %s." port))
   (start-server))
