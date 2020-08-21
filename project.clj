@@ -1,4 +1,4 @@
-(defproject web-lite/lein-template "0.0.2"
+(defproject web-lite/lein-template "0.0.3"
   :description "A Leiningen template for a bare bones simple webapp"
   :url "https://github.com/kwrooijen/lein-web-lite"
   :license {:name "MIT"}
