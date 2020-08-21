@@ -3,7 +3,7 @@
   (:require
    [aleph.http :as http]
    [reitit.ring :as ring]
-   [ring.middleware.defaults :refer [wrap-defaults]]))
+   [ring.middleware.defaults :as defaults]))
 
 ;; Handlers
 
@@ -19,7 +19,7 @@
 (def ring-opts
   {:data
    {:middleware
-    [#(wrap-defaults % ring.middleware.defaults/api-defaults)]}})
+    [[defaults/wrap-defaults defaults/api-defaults]]}})
 
 (def app
   (ring/ring-handler
