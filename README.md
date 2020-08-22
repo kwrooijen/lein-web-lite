@@ -1,7 +1,10 @@
 # Web lite Leiningen template
 
-A simple, bare bones lein template for generating a webapp. Using Ring, Aleph
-and Reitit. This template is meant for demonstration purposes.
+A simple, bare bones lein template for generating a webapp. Using
+[Ring](https://github.com/ring-clojure/ring),
+[Aleph](https://github.com/aleph-io/aleph) and
+[Reitit](https://github.com/metosin/reitit). This template is meant for
+demonstration purposes.
 
 ## Setup
 
@@ -15,7 +18,7 @@ lein run
 
 ```sh
 lein uberjar
-java -jar
+java -jar target/hello-world.jar
 ```
 
 ## Author / License
